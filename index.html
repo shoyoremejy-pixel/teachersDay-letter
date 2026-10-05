@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="theme-color"
+      content="#fbf3d8"
+    />
+    <meta
+      name="description"
+      content="A heartfelt Teacher's Day note for Mom, honoring her years as a teacher and the lessons she taught at home."
+    />
+    <title>A Letter for Mom | Happy Teachers’ Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="experience">
+      <div class="ambient ambient--one" aria-hidden="true"></div>
+      <div class="ambient ambient--two" aria-hidden="true"></div>
+      <div class="sparkles" aria-hidden="true">
+        <span class="sparkle sparkle--one">✳</span>
+        <span class="sparkle sparkle--two">✦</span>
+        <span class="sparkle sparkle--three">✧</span>
+        <span class="sparkle sparkle--four">✳</span>
+        <span class="sparkle sparkle--five">✦</span>
+        <span class="sparkle sparkle--six">✧</span>
+        <span class="sparkle sparkle--seven">·</span>
+        <span class="sparkle sparkle--eight">·</span>
+      </div>
+
+      <section class="scene" aria-label="A Teacher's Day letter">
+        <div class="intro">
+          <span class="eyebrow">A LITTLE NOTE OF THANKS</span>
+          <h1>For my first teacher<br />and forever <em>Mom.</em></h1>
+          <p class="intro__subheading">A little love note for the teacher who raised me.</p>
+        </div>
+
+        <div class="envelope-area" id="envelope-area">
+          <button
+            class="envelope"
+            id="envelope"
+            type="button"
+            aria-label="Open your Teacher's Day letter for Mom"
+            aria-expanded="false"
+            aria-describedby="envelope-instruction"
+          >
+            <span class="envelope__letter" aria-hidden="true">
+              <span class="envelope__letter-rule"></span>
+              <span class="envelope__letter-heart">♡</span>
+            </span>
+            <span class="envelope__back" aria-hidden="true"></span>
+            <span class="envelope__flap" aria-hidden="true"></span>
+            <span class="envelope__front" aria-hidden="true"></span>
+            <span class="envelope__seal" aria-hidden="true">
+              <span>✿</span>
+            </span>
+            <span class="envelope__label" aria-hidden="true">
+              <span class="envelope__label-small">A LETTER FOR</span>
+              <span class="envelope__label-title">Mom</span>
+              <span class="envelope__label-rule"></span>
+              <span class="envelope__label-day">with love &amp; gratitude</span>
+            </span>
+            <span class="envelope__postmark" aria-hidden="true">
+              <span>✳</span>
+              <span>MADE WITH<br />GRATITUDE</span>
+            </span>
+            <span class="envelope__corner envelope__corner--left" aria-hidden="true">✿</span>
+            <span class="envelope__corner envelope__corner--right" aria-hidden="true">✿</span>
+          </button>
+          <span class="envelope-shadow" aria-hidden="true"></span>
+        </div>
+
+        <p class="instruction" id="envelope-instruction">
+          <span class="instruction__line" aria-hidden="true"></span>
+          <span id="instruction-text">Click to open your letter</span>
+          <span class="instruction__line" aria-hidden="true"></span>
+        </p>
+
+        <button class="read-button" id="read-button" type="button" hidden>
+          <span>Read your letter</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+
+        <article class="letter" id="letter" aria-labelledby="letter-title" aria-hidden="true">
+          <div class="letter__paper">
+            <div class="letter__topline">
+              <span class="letter__mark" aria-hidden="true">✳</span>
+              <span>A NOTE OF GRATITUDE</span>
+              <span class="letter__mark" aria-hidden="true">✳</span>
+            </div>
+            <div class="letter__divider" aria-hidden="true"><span>✿</span></div>
+            <h2 id="letter-title">Happy Teachers’ Day, Mom!</h2>
+            <div class="letter__message">
+              <p>Dear Mom,</p>
+              <p>
+                You were a wonderful teacher to so many students, but you have
+                always been my very first teacher. At home and in the classroom,
+                you showed what patience, kindness, and dedication look like.
+              </p>
+              <p>
+                Thank you for every lesson, every gentle word, and every time
+                you encouraged me to keep trying. The care you gave your
+                students—and the love and guidance you gave me—helped shape the
+                person I am today.
+              </p>
+              <p>
+                I’m so proud of the teacher you were, and endlessly grateful
+                that I get to call you my mom. Your lessons will stay with me
+                for a lifetime.
+              </p>
+              <p>With all my love and gratitude,</p>
+            </div>
+            <p class="letter__signature">Your loving child<span>♡</span></p>
+            <div class="letter__footer" aria-hidden="true">
+              <span>MADE WITH LOVE</span>
+              <span class="letter__footer-flower">✿</span>
+              <span>JUST FOR YOU</span>
+            </div>
+          </div>
+          <button class="back-button" id="back-button" type="button">
+            <span aria-hidden="true">←</span>
+            Back to envelope
+          </button>
+        </article>
+
+        <p class="page-note" aria-hidden="true">
+          <span>✿</span> A little appreciation goes a long way <span>✿</span>
+        </p>
+        <button class="qr-button" id="qr-button" type="button">
+          Share this letter <span aria-hidden="true">✳</span>
+        </button>
+        <p class="sr-only" id="experience-status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <dialog class="qr-dialog" id="qr-dialog" aria-labelledby="qr-title">
+      <form method="dialog">
+        <button class="qr-dialog__close" aria-label="Close QR code">×</button>
+      </form>
+      <span class="qr-dialog__flower" aria-hidden="true">✿</span>
+      <h2 id="qr-title">A little love, one scan away</h2>
+      <p>Scan this code to open Mom’s letter on your phone.</p>
+      <a class="qr-dialog__link" id="qr-link" href="https://shoyoremejy-pixel.github.io/teachersDay-letter/" target="_blank" rel="noreferrer">
+        <img
+          class="qr-dialog__image"
+          id="qr-image"
+          width="220"
+          height="220"
+          alt="QR code linking to Mom’s Teacher’s Day letter"
+        />
+      </a>
+      <a class="qr-dialog__url" id="qr-url" href="https://shoyoremejy-pixel.github.io/teachersDay-letter/" target="_blank" rel="noreferrer">
+        Open the letter
+      </a>
+    </dialog>
+  </body>
+</html>

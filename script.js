@@ -1,7 +1,6 @@
 const scene = document.querySelector(".scene");
 const envelope = document.querySelector("#envelope");
 const instructionText = document.querySelector("#instruction-text");
-const readButton = document.querySelector("#read-button");
 const backButton = document.querySelector("#back-button");
 const letter = document.querySelector("#letter");
 const status = document.querySelector("#experience-status");
@@ -19,11 +18,6 @@ function openEnvelope() {
     return;
   }
 
-  if (scene.classList.contains("is-open")) {
-    showLetter();
-    return;
-  }
-
   scene.classList.add("is-opening");
   envelope.setAttribute("aria-expanded", "true");
   instructionText.textContent = "Opening your letter…";
@@ -31,9 +25,7 @@ function openEnvelope() {
   openingTimer = window.setTimeout(() => {
     scene.classList.remove("is-opening");
     scene.classList.add("is-open");
-    instructionText.textContent = "Your letter is ready";
-    readButton.hidden = false;
-    status.textContent = "The envelope is open. Your letter is ready to read.";
+    showLetter();
   }, 1050);
 }
 
@@ -42,7 +34,6 @@ function showLetter() {
   scene.classList.remove("is-opening");
   scene.classList.add("is-open", "is-letter");
   letter.setAttribute("aria-hidden", "false");
-  readButton.hidden = true;
   status.textContent = "Your Teacher’s Day letter is open.";
   backButton.focus({ preventScroll: true });
 }
@@ -52,13 +43,11 @@ function closeLetter() {
   letter.setAttribute("aria-hidden", "true");
   envelope.setAttribute("aria-expanded", "false");
   instructionText.textContent = "Click to open your letter";
-  readButton.hidden = true;
   status.textContent = "The letter is closed.";
   envelope.focus({ preventScroll: true });
 }
 
 envelope.addEventListener("click", openEnvelope);
-readButton.addEventListener("click", showLetter);
 backButton.addEventListener("click", closeLetter);
 
 qrButton.addEventListener("click", () => {
